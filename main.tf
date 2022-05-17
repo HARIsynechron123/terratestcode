@@ -3,7 +3,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-south-1"
+  region = "us-east-2"
   access_key = "AKIAXXTFJVECNHNN5AMP"
   secret_key = "RUN5N5/++64UYGqtenxaJxFYhSLbVsEA/onk01kg"
 }
@@ -11,7 +11,7 @@ provider "aws" {
 # Deploy an EC2 Instance.
 resource "aws_instance" "example" {
   # Run an Ubuntu 18.04 AMI on the EC2 instance.
-  ami                    = "ami-0d5d9d301c853a04a"
+  ami                    = "ami-0aeb7c931a5a61206"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.instance.id]
 
