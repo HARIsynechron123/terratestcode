@@ -4,8 +4,8 @@ terraform {
 
 provider "aws" {
   region = "us-east-2"
-  access_key = "AKIAXXTFJVECORSDYB7D"
-  secret_key = "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"
+  access_key = "AKIAU5GTBFLQQQ7242TJ"
+  secret_key = "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"
 }
 
 # Deploy an EC2 Instance.
