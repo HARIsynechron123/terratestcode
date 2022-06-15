@@ -11,7 +11,7 @@ resource "aws_instance" "example" {
   # Run an Ubuntu 18.04 AMI on the EC2 instance.
   ami                    = "ami-0aeb7c931a5a61206"
   instance_type          = "t2.micro"
-  vpc_security_group_ids = [data.sgr-0e23077d115442e5c.instance.id]
+  vpc_security_group_ids = [data.sg-03aaf0d9ad6c4c654.instance.id]
 
   # When the instance boots, start a web server on port 8080 that responds with "Hello, World!".
   user_data = <<EOF
@@ -22,7 +22,7 @@ EOF
 }
 
 # Allow the instance to receive requests on port 8080.
-data "sgr-0e23077d115442e5c" "instance" {
+data "sg-03aaf0d9ad6c4c654" "instance" {
   ingress {
     from_port   = 8080
     to_port     = 8080
